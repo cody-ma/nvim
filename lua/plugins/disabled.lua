@@ -1,7 +1,6 @@
 return {
   { "echasnovski/mini.surround", enabled = false },
   { "folke/flash.nvim", enabled = false },
-  { "folke/noice.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
   { "folke/todo-comments.nvim", enabled = false },
   { "gbprod/yanky.nvim", enabled = false },

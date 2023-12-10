@@ -39,11 +39,7 @@ return {
           },
         },
         terraformls = {},
-        tsserver = {
-          keys = {
-            { "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", desc = "Organize Imports" },
-          },
-        },
+        tsserver = {},
         yamlls = {},
       },
     },

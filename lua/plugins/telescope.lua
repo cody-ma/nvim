@@ -3,13 +3,13 @@ return {
   keys = {
     {
       "<C-p>",
-      "<cmd>Telescope find_files<CR>",
+      "<Cmd>Telescope find_files<CR>",
       desc = "Find files",
     },
     {
-      "<leader>b",
-      "<cmd>Telescope buffers<cr>",
-      desc = "Recent",
+      "<C-b>",
+      "<Cmd>Telescope buffers<CR>",
+      desc = "Recent buffers",
     },
   },
   dependencies = {

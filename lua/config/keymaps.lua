@@ -1,7 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-local Util = require("lazyvim.util")
+-- local Util = require("lazyvim.util")
 local map = vim.keymap
 
 map.del("n", "<leader>e")
@@ -25,21 +25,21 @@ cnoreabbrev <expr> ag ('Rg')
 ]])
 
 -- Tab to move to between buffers
-if Util.has("bufferline.nvim") then
-  map.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
-  map.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
-  map.del("n", "<S-h>")
-  map.del("n", "<S-l>")
-else
-  map.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-  map.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
-end
+-- if Util.has("bufferline.nvim") then
+--   map.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+--   map.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+--   map.del("n", "<S-h>")
+--   map.del("n", "<S-l>")
+-- else
+--   map.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+--   map.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+-- end
 
 -- make copilot and nvim-cmp work well together
-vim.g.copilot_no_tab_map = true
-map.set(
-  "i",
-  "<Plug>(vimrc:copilot-dummy-map)",
-  'copilot#Accept("")',
-  { silent = true, expr = true, desc = "Copilot dummy accept" }
-)
+-- vim.g.copilot_no_tab_map = true
+-- map.set(
+--   "i",
+--   "<Plug>(vimrc:copilot-dummy-map)",
+--   'copilot#Accept("")',
+--   { silent = true, expr = true, desc = "Copilot dummy accept" }
+-- )

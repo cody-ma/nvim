@@ -6,7 +6,6 @@ vim.g.gruvbox_material_foreground = "mix"
 vim.g.autoformat = "true"
 
 vim.opt.swapfile = false
-vim.wo.relativenumber = false
 
 -- fold options
 vim.opt.foldmethod = "manual"
