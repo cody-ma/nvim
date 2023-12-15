@@ -30,6 +30,11 @@ return {
   },
   opts = {
     defaults = {
+      mappings = {
+        i = {
+          ["<c-t>"] = require("telescope.actions").select_tab,
+        },
+      },
       layout_config = {
         width = 0.95,
         height = 0.95,
