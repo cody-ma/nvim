@@ -8,5 +8,5 @@ vim.g.autoformat = "true"
 vim.opt.swapfile = false
 
 -- fold options
-vim.opt.foldmethod = "manual"
-vim.opt.foldenable = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
