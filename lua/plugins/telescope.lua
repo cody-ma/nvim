@@ -36,7 +36,7 @@ return {
         },
       },
       layout_config = {
-        width = 0.95,
+        width = 0.85,
         height = 0.95,
         prompt_position = "top",
       },
