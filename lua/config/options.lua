@@ -7,3 +7,7 @@ vim.opt.swapfile = false
 -- fold options
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- git blame configuration
+vim.g.gitblame_message_template = "  <author>, <date> • <summary>"
+vim.g.gitblame_date_format = "%r"
