@@ -38,11 +38,9 @@ return {
       layout_config = {
         width = 0.85,
         height = 0.95,
-        prompt_position = "top",
       },
       layout_strategy = "vertical",
-      sorting_strategy = "ascending",
-      winblend = 0,
+      sorting_strategy = "descending",
     },
   },
 }
