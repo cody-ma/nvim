@@ -24,19 +24,19 @@ return {
         sqlls = {},
         solargraph = {
           -- See: https://medium.com/@cristianvg/neovim-lsp-your-rbenv-gemset-and-solargraph-8896cb3df453
-          cmd = { os.getenv("HOME") .. "/.asdf/shims/solargraph", "stdio" },
-          root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
-          settings = {
-            solargraph = {
-              autoformat = true,
-              completion = true,
-              diagnostics = true,
-              folding = true,
-              references = true,
-              rename = true,
-              symbols = true,
-            },
-          },
+          -- cmd = { os.getenv("HOME") .. "/.asdf/shims/solargraph", "stdio" },
+          -- root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
+          -- settings = {
+          --   solargraph = {
+          --     autoformat = true,
+          --     completion = true,
+          --     diagnostics = true,
+          --     folding = true,
+          --     references = true,
+          --     rename = true,
+          --     symbols = true,
+          --   },
+          -- },
         },
         terraformls = {},
         tsserver = {},

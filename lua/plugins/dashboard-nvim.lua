@@ -13,6 +13,12 @@ return {
     logo = string.rep("\n", 8) .. logo .. "\n\n"
     local opts = {
       theme = "doom",
+      hide = {
+        -- this is taken care of by lualine
+        -- enabling this messes up the actual laststatus setting after loading a file
+        statusline = false,
+      },
+
       config = {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
