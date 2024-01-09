@@ -23,9 +23,9 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          { action = "Telescope find_files", icon = "  ",  desc = "Open File",    key = "o" },
+          { action = "Telescope find_files", icon = "  ",  desc = "Goto File",    key = "f" },
           { action = "Telescope oldfiles",   icon = "  ",  desc = "Recent Files", key = "r" },
-          { action = "Telescope live_grep",  icon = "  ",  desc = "Find Text",    key = "f" },
+          { action = "Telescope git_status", icon = "  ",  desc = "Git Modified", key = "g" },
           { action = "LazyExtras",           icon = "  ",  desc = "Lazy Extras",  key = "e" },
           { action = "Lazy",                 icon = "󰒲  ",  desc = "Lazy Panel",   key = "l" },
           { action = "qa",                   icon = "  ",  desc = "Quit",         key = "q" },

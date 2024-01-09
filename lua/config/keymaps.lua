@@ -6,6 +6,7 @@ map.del("n", "<leader>fe")
 map.set("n", ";", ":")
 map.set("n", ":", ";")
 map.set("n", "0", "^")
+map.set("n", "gt", ":tab LspDefinition")
 map.set("i", "jj", "<Esc>")
 
 map.set("n", "<leader>v", ":vsp ")
