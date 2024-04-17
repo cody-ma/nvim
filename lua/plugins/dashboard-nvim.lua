@@ -26,6 +26,7 @@ return {
           { action = "Telescope find_files", icon = "  ",  desc = "Find File",    key = "f" },
           { action = "Telescope oldfiles",   icon = "  ",  desc = "Recent Files", key = "r" },
           { action = "Telescope git_status", icon = "  ",  desc = "Git Modified", key = "g" },
+          { action = "enew",                 icon = "  ",  desc = "New File",     key = "n" },
           { action = "LazyExtras",           icon = "  ",  desc = "Lazy Extras",  key = "e" },
           { action = "Lazy",                 icon = "󰒲  ",  desc = "Lazy Panel",   key = "l" },
           { action = "qa",                   icon = "  ",  desc = "Quit",         key = "q" },
