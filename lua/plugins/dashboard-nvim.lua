@@ -23,7 +23,7 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          { action = "Telescope find_files", icon = "  ",  desc = "Goto File",    key = "f" },
+          { action = "Telescope find_files", icon = "  ",  desc = "Find File",    key = "f" },
           { action = "Telescope oldfiles",   icon = "  ",  desc = "Recent Files", key = "r" },
           { action = "Telescope git_status", icon = "  ",  desc = "Git Modified", key = "g" },
           { action = "LazyExtras",           icon = "  ",  desc = "Lazy Extras",  key = "e" },
