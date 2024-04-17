@@ -1,8 +1,18 @@
-local lspconfig = require("lspconfig")
-
 return {
   {
     "neovim/nvim-lspconfig",
+    keys = {
+      {
+        "gd",
+        "<cmd>tab split | lua vim.lsp.buf.definition()<CR>",
+        desc = "Goto definition in new tab",
+      },
+      {
+        "ge",
+        "<cmd>lua vim.lsp.buf.definition()<CR>",
+        desc = "Goto definition in current window",
+      },
+    },
     opts = {
       -- Useful for debugging formatter issues
       format_notify = false,
