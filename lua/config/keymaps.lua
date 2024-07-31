@@ -7,6 +7,7 @@ map.set("n", ";", ":")
 map.set("n", ":", ";")
 map.set("n", "0", "^")
 map.set("n", "gt", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", {})
+map.set("n", "gv", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", {})
 map.set("i", "jj", "<Esc>")
 
 map.set("n", "<leader>v", ":vsp ")

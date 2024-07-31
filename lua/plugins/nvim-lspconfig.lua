@@ -1,3 +1,5 @@
+local lspconfig = require("lspconfig")
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -31,13 +33,13 @@ return {
           },
         },
         marksman = {},
-        ruby_ls = {
-          cmd = { "bundle", "exec", "ruby-lsp" },
-          init_options = {
-            formatter = "auto",
-          },
-          settings = {},
+        pyright = {},
+        rubocop = {
+          -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
+          cmd = { "bundle", "exec", "rubocop", "--lsp" },
+          root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
         },
+        ruby_lsp = {},
         sqlls = {},
         terraformls = {},
         tsserver = {},
