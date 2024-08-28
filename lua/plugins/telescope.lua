@@ -7,7 +7,7 @@ return {
       desc = "Find files",
     },
     {
-      "<C-b>",
+      "<leader>b",
       "<Cmd>Telescope buffers<CR>",
       desc = "Recent buffers",
     },

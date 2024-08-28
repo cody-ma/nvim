@@ -18,6 +18,9 @@ return {
     opts = {
       -- Useful for debugging formatter issues
       format_notify = false,
+      inlay_hints = {
+        enabled = false,
+      },
       servers = {
         bashls = {
           filetypes = { "sh", "zsh" },
