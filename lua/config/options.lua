@@ -1,7 +1,9 @@
 vim.g.mapleader = ","
 vim.g.gruvbox_material_foreground = "mix"
 vim.g.autoformat = "true"
+vim.g.snacks_animate = false
 
+vim.opt.relativenumber = false
 vim.opt.swapfile = false
 
 -- fold options

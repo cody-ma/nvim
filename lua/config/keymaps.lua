@@ -1,7 +1,7 @@
 local map = vim.keymap
 
-map.del("n", "<leader>e")
-map.del("n", "<leader>fe")
+-- map.del("n", "<leader>e")
+-- map.del("n", "<leader>fe")
 
 map.set("n", ";", ":")
 map.set("n", ":", ";")
