@@ -1,8 +1,5 @@
 local map = vim.keymap
 
--- map.del("n", "<leader>e")
--- map.del("n", "<leader>fe")
-
 map.set("n", ";", ":")
 map.set("n", ":", ";")
 map.set("n", "0", "^")
@@ -12,8 +9,8 @@ map.set("i", "jj", "<Esc>")
 
 map.set("n", "<leader>v", ":vsp ")
 map.set("n", "<leader>cp", ":let @+=expand('%:.')<CR>")
-map.set("n", "<leader>r", ":Telescope oldfiles<CR>")
 map.set("n", "<leader>a", ":A<CR>")
+map.set("n", "<C-p>", ":lua require('fzf-lua').files()<CR>")
 
 vim.cmd([[
   cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))

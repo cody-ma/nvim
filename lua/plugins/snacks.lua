@@ -1,5 +1,8 @@
 return {
   "folke/snacks.nvim",
+  keys = {
+    { "<leader>n", false },
+  },
   opts = {
     dashboard = {
       preset = {
@@ -20,8 +23,8 @@ return {
           cmd = "pokemon-colorscripts -r --no-title; sleep .1",
           random = 10,
           pane = 1,
-          indent = 4,
-          height = 30,
+          indent = 10,
+          height = 20,
         },
       },
     },
