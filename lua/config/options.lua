@@ -1,5 +1,8 @@
 vim.g.mapleader = ","
-vim.g.gruvbox_material_foreground = "mix"
+-- material, mix, original
+vim.g.gruvbox_material_foreground = "original"
+-- hard, medium, soft
+vim.g.gruvbox_material_background = "medium"
 vim.g.autoformat = "true"
 vim.g.snacks_animate = false
 

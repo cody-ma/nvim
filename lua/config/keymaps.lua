@@ -9,7 +9,6 @@ map.set("i", "jj", "<Esc>")
 
 map.set("n", "<leader>v", ":vsp ")
 map.set("n", "<leader>cp", ":let @+=expand('%:.')<CR>")
-map.set("n", "<leader>a", ":A<CR>")
 map.set("n", "<C-p>", ":lua require('fzf-lua').files()<CR>")
 
 vim.cmd([[
