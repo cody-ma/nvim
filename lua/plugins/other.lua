@@ -34,6 +34,17 @@ return {
             { context = "source", target = "%1/app/%4s/%3_%4.rb" },
           },
         },
+        -- custom mapping for Python test files
+        {
+          pattern = "(.+)/tests/test_(.*).py",
+          target = "%1/%2.py",
+          context = "source",
+        },
+        {
+          pattern = "(.+)/([^/]+).py",
+          target = "%1/tests/test_%2.py",
+          context = "test",
+        },
         -- custom mapping for source.ts to source.spec.ts and vice versa
         {
           pattern = "(.*).spec.ts$",
@@ -46,16 +57,16 @@ return {
           context = "spec",
         },
         -- custom mapping for source.tsx to source.stories.tsx and vice versa
-        {
-          pattern = "(.*).stories.tsx$",
-          target = "%1.tsx",
-          context = "source",
-        },
-        {
-          pattern = "(.*).tsx$",
-          target = "%1.stories.tsx",
-          context = "spec",
-        },
+        -- {
+        --   pattern = "(.*).stories.tsx$",
+        --   target = "%1.tsx",
+        --   context = "source",
+        -- },
+        -- {
+        --   pattern = "(.*).tsx$",
+        --   target = "%1.stories.tsx",
+        --   context = "spec",
+        -- },
         -- custom mapping for source.tsx to source.spec.tsx and vice versa
         {
 
