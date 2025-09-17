@@ -1,5 +1,5 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   keys = {
     { "<leader>cm", false },
   },
@@ -16,8 +16,8 @@ return {
       "lua-language-server",
       "marksman",
       "prettierd",
-      "ruby-lsp",
-      "rubocop",
+      -- "ruby-lsp",
+      -- "rubocop",
       "shellcheck",
       "shfmt",
       "sqlls",

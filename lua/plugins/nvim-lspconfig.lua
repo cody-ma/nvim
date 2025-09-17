@@ -37,12 +37,12 @@ return {
         },
         marksman = {},
         pyright = {},
-        rubocop = {
-          -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
-          cmd = { "bundle", "exec", "rubocop", "--lsp" },
-          root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
-        },
-        ruby_lsp = {},
+        -- rubocop = {
+        -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
+        -- cmd = { "bundle", "exec", "rubocop", "--lsp" },
+        -- root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
+        -- },
+        -- ruby_lsp = {},
         sqlls = {},
         terraformls = {},
         tsserver = {},
