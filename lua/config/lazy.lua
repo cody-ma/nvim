@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
@@ -8,14 +8,21 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 -- pin nvim to a specific node version, regardless of the project
 -- prereq - need to install: nvm i 16.17.1
-vim.g.node_host_prog = "/Users/cody/.asdf/shims/node"
+vim.g.node_host_prog = vim.fn.expand("~/.asdf/shims/node")
 
 -- for mason.nvim
-vim.cmd("let $PATH = '/Users/cody/.asdf/shims/node:' . $PATH")
+vim.env.PATH = vim.fn.expand("~/.asdf/shims") .. ":" .. vim.env.PATH
+
+-- Remove nvim-lspconfig's default ruby_lsp config to prevent double LSP client
+-- This file conflicts with LazyVim's config and causes duplicate clients
+local ruby_lsp_default = vim.fn.stdpath("data") .. "/lazy/nvim-lspconfig/lsp/ruby_lsp.lua"
+if vim.uv.fs_stat(ruby_lsp_default) then
+  os.remove(ruby_lsp_default)
+end
 
 require("lazy").setup({
   change_detection = {
-    { enabled = false },
+    enabled = false,
   },
   spec = {
     -- add LazyVim and import its plugins
@@ -41,7 +48,7 @@ require("lazy").setup({
         "gzip",
         -- "matchit",
         -- "matchparen",
-        -- "netrwPlugin",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

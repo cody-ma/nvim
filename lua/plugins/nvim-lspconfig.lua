@@ -1,5 +1,3 @@
-local lspconfig = require("lspconfig")
-
 return {
   {
     "neovim/nvim-lspconfig",
@@ -10,9 +8,19 @@ return {
         desc = "Goto definition in new tab",
       },
       {
+        "gt",
+        "<cmd>tab split | lua vim.lsp.buf.definition()<CR>",
+        desc = "Goto definition in new tab",
+      },
+      {
         "ge",
         "<cmd>lua vim.lsp.buf.definition()<CR>",
         desc = "Goto definition in current window",
+      },
+      {
+        "gv",
+        "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>",
+        desc = "Goto definition in vsplit",
       },
     },
     opts = {
@@ -37,15 +45,17 @@ return {
         },
         marksman = {},
         pyright = {},
-        -- rubocop = {
-        -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
-        -- cmd = { "bundle", "exec", "rubocop", "--lsp" },
-        -- root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
-        -- },
-        -- ruby_lsp = {},
+        ruby_lsp = {
+          mason = false,
+          cmd = { vim.fn.expand("~/.asdf/shims/ruby-lsp") },
+          init_options = {
+            formatter = "rubocop",
+            linters = { "rubocop" },
+          },
+        },
         sqlls = {},
         terraformls = {},
-        tsserver = {},
+        ts_ls = {},
         yamlls = {},
       },
     },
