@@ -21,3 +21,7 @@ vim.opt.gdefault = true
 -- git blame configuration
 vim.g.gitblame_message_template = "  <author>, <date> • <summary>"
 vim.g.gitblame_date_format = "%r"
+
+-- window title
+vim.opt.title = true
+vim.opt.titlestring = "%t"

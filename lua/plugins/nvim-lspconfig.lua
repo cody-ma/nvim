@@ -29,34 +29,55 @@ return {
       inlay_hints = {
         enabled = false,
       },
+      -- Disable autostart for all LSP servers
+      setup = {
+        ["*"] = function(server, opts)
+          opts.autostart = false
+          return false
+        end,
+        -- Completely skip these servers
+        eslint = function()
+          return true
+        end,
+        ts_ls = function()
+          return true
+        end,
+        vtsls = function()
+          return true
+        end,
+      },
       servers = {
         bashls = {
+          autostart = false,
           filetypes = { "sh", "zsh" },
         },
-        denols = {},
-        diagnosticls = {},
-        dockerls = {},
-        helm_ls = {},
+        denols = { autostart = false },
+        diagnosticls = { autostart = false },
+        dockerls = { autostart = false },
+        helm_ls = { autostart = false },
         lua_ls = {
+          autostart = false,
           Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
           },
         },
-        marksman = {},
-        pyright = {},
+        marksman = { autostart = false },
+        pyright = { autostart = false },
         ruby_lsp = {
+          autostart = false,
           mason = false,
           cmd = { vim.fn.expand("~/.asdf/shims/ruby-lsp") },
+          filetypes = { "ruby", "eruby" },
+          root_markers = { "Gemfile", ".git" },
           init_options = {
             formatter = "rubocop",
             linters = { "rubocop" },
           },
         },
-        sqlls = {},
-        terraformls = {},
-        ts_ls = {},
-        yamlls = {},
+        sqlls = { autostart = false },
+        terraformls = { autostart = false },
+        yamlls = { autostart = false },
       },
     },
   },

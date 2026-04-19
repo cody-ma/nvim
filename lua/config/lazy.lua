@@ -13,13 +13,6 @@ vim.g.node_host_prog = vim.fn.expand("~/.asdf/shims/node")
 -- for mason.nvim
 vim.env.PATH = vim.fn.expand("~/.asdf/shims") .. ":" .. vim.env.PATH
 
--- Remove nvim-lspconfig's default ruby_lsp config to prevent double LSP client
--- This file conflicts with LazyVim's config and causes duplicate clients
-local ruby_lsp_default = vim.fn.stdpath("data") .. "/lazy/nvim-lspconfig/lsp/ruby_lsp.lua"
-if vim.uv.fs_stat(ruby_lsp_default) then
-  os.remove(ruby_lsp_default)
-end
-
 require("lazy").setup({
   change_detection = {
     enabled = false,

@@ -16,7 +16,6 @@ return {
         "jsonnet-language-server",
         "lua-language-server",
         "marksman",
-        "prettierd",
         "shellcheck",
         "shfmt",
         "sqlls",
